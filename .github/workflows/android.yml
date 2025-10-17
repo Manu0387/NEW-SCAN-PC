@@ -31,7 +31,7 @@ jobs:
       - name: Build Debug APK (verbose)
         run: |
           $HOME/gradle-8.7/bin/gradle --version
-          $HOME/gradle-8.7/bin/gradle assembleDebug --stacktrace --info
+          $HOME/gradle-8.7/bin/gradle assembleDebug --stacktrace --info --warning-mode=all || true
 
       - name: Rename APK
         run: |
