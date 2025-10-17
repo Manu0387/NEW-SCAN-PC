@@ -27,10 +27,10 @@ jobs:
           unzip -q gradle-8.7-bin.zip -d $HOME
           $HOME/gradle-8.7/bin/gradle -v
 
-      - name: Build Debug APK
-        run: |
-          $HOME/gradle-8.7/bin/gradle --version
-          $HOME/gradle-8.7/bin/gradle assembleDebug
+      - name: Build Debug APK (verbose)
+  run: |
+    $HOME/gradle-8.7/bin/gradle --version
+    $HOME/gradle-8.7/bin/gradle assembleDebug --stacktrace --info
 
       - name: Rename APK
         run: |
